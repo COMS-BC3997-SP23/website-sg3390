@@ -7,7 +7,7 @@ from Amazon as well as eBay or Walmart. In that case, which seller should the us
 disadvantages of getting the same product from different sellers? 
 
 In an effort to answer these questions, this project will develop a system that compares the performance of the same product across 
-different e-commerce sellers. By identifying the differences across platforms, this algorithm will reccomend buyers the best platform
+different e-commerce sellers. By identifying the differences across platforms, this algorithm will recommend buyers the best platform
 to obtain their product from. Furthermore, it will point out the lacking parts of the seller and will propose the areas where they need
 to improve their service. 
 
@@ -20,3 +20,7 @@ visuals that will best represent the analysis.
 
 Previously, I have developed programs that utilized webscraping in static website. The challenge of this project will be to build 
 one for a dynamic website. 
+
+## Update- February 6
+### Deciding on tools to be used
+
