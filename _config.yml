@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "sunrise" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -25,7 +25,7 @@ url                      : "https://coms-bc3997-sp23.github.io"
 baseurl                  : "/website-sg3390"
 repository               : "COMS-BC3997-SP23/website-sg3390"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : # "/assets/images/serra_image.jpg"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -105,12 +105,12 @@ analytics:
 # Site Author
 author:
   name             : "Serra Goker"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/serra_image.jpg"
   bio              : "This is the website for Serra Goker's COMS-BC3997 Project Updates"
-  location         : "Somewhere"
+  location         : "Barnard College, New York"
   email            :
   links:
-    - label: "Email"
+    - label: "sg3390@barnard.edu"
       icon: "fas fa-fw fa-envelope-square"
       # url: "mailto:your.name@email.com"
     - label: "Website"
