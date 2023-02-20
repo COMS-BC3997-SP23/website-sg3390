@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "aqua" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -22,7 +22,7 @@ subtitle                 : # site tagline that appears below site title in masth
 name                     : "Serra Goker"
 description              : "Weekly updates are below."
 url                      : "https://coms-bc3997-sp23.github.io"
-baseurl                  : "/website-sg3390/"
+baseurl                  : "/website-sg3390"
 repository               : "COMS-BC3997-SP23/website-sg3390"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
@@ -104,9 +104,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Serra Goker"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "This is the website for Serra Goker's COMS-BC3997 Project Updates"
   location         : "Somewhere"
   email            :
   links:
