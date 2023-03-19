@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/website-sg3390/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/website-sg3390/" rel="alternate" type="text/html" /><updated>2023-02-26T21:45:42-05:00</updated><id>http://localhost:4000/website-sg3390/feed.xml</id><title type="html">Serra’s Project Updates</title><subtitle>Weekly updates are below.</subtitle><author><name>Serra Goker</name></author><entry><title type="html">Update 3</title><link href="http://localhost:4000/website-sg3390/update-3/" rel="alternate" type="text/html" title="Update 3" /><published>2023-02-24T00:00:00-05:00</published><updated>2023-02-24T00:00:00-05:00</updated><id>http://localhost:4000/website-sg3390/update-3</id><content type="html" xml:base="http://localhost:4000/website-sg3390/update-3/"><![CDATA[<h2 id="update-week-4">Update Week 4</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/website-sg3390/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/website-sg3390/" rel="alternate" type="text/html" /><updated>2023-03-18T22:31:46-04:00</updated><id>http://localhost:4000/website-sg3390/feed.xml</id><title type="html">Serra’s Project Updates</title><subtitle>Weekly updates are below.</subtitle><author><name>Serra Goker</name></author><entry><title type="html">Project Update Presentation</title><link href="http://localhost:4000/website-sg3390/presentation/midway-update/" rel="alternate" type="text/html" title="Project Update Presentation" /><published>2023-03-15T00:00:00-04:00</published><updated>2023-03-15T00:00:00-04:00</updated><id>http://localhost:4000/website-sg3390/presentation/midway-update</id><content type="html" xml:base="http://localhost:4000/website-sg3390/presentation/midway-update/"><![CDATA[<h4 id="this-page-contains-a-presentation-of-everything-that-has-been-completed-in-this-project-so-far">This page contains a presentation of everything that has been completed in this project so far.</h4>
+
+<h2 id="what-is-the-project">What is the project?</h2>
+
+<p>The goal of this project is to compare the reviews of three different products, produced from the same manufacturer 
+and sold by different merchandisers. The manufacturer is Ulker (a leading food company in Turkey famous for its sweet
+snacks). The products of Ulker can be found on the greatest e-commerce platform in Turkey: Trendyol. Similar to 
+Amazon, you can get the same product from different sellers on Trendyol. We observed that the same product sold by 
+different merchandisers have different concerns on the comments section. Therefore, we wanted to compare the comment 
+section of three different products.</p>
+
+<h2 id="progress-of-the-project">Progress of the Project:</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Identify the products to be used in analysis</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Implement a web scraper to obtain the comments from the website</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Clean and format the data, save and store in Excel files</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Implement a Django Rest Framework API and post the data</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Analyze the data</li>
+</ul>
+
+<ol>
+  <li>
+    <p>Products Used in Analysis:</p>
+  </li>
+  <li>
+    <p>Codes Implemented for Web Scraping:</p>
+    <ol>
+      <li>Utilized Selenium and BeautifulSoup</li>
+    </ol>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  browser = webdriver.Chrome(ChromeDriverManager().install())
+  browser.maximize_window()
+  browser.get(url)
+</code></pre></div>    </div>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>time.sleep(10)
+ while i &lt; loop:
+     browser.execute_script("window.scrollBy(0, 700);")
+     time.sleep(0.8)
+     i += 1
+     django_logger.debug(f' Loop number: {i}')
+
+ html = browser.page_source
+ soup = BeautifulSoup(html, 'lxml')
+</code></pre></div>    </div>
+    <h2 id="complications-and-problems">Complications and Problems:</h2>
+  </li>
+</ol>
+
+<h2 id="next-steps">Next Steps:</h2>]]></content><author><name>Serra Goker</name></author><category term="Presentation" /><summary type="html"><![CDATA[This page contains a presentation of everything that has been completed in this project so far.]]></summary></entry><entry><title type="html">Update 3</title><link href="http://localhost:4000/website-sg3390/update-3/" rel="alternate" type="text/html" title="Update 3" /><published>2023-02-24T00:00:00-05:00</published><updated>2023-02-24T00:00:00-05:00</updated><id>http://localhost:4000/website-sg3390/update-3</id><content type="html" xml:base="http://localhost:4000/website-sg3390/update-3/"><![CDATA[<h2 id="update-week-4">Update Week 4</h2>
 
 <h3 id="identifying-and-scraping-competitor-products">Identifying and scraping competitor products</h3>
 
