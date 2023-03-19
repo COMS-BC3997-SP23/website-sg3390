@@ -282,7 +282,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -305,6 +305,13 @@ Amazon, you can get the same product from different sellers on Trendyol. We obse
 different merchandisers have different concerns on the comments section. Therefore, we wanted to compare the comment 
 section of three different products.</p>
 
+<p>The products:</p>
+<ol>
+  <li><a href="https://www.trendyol.com/ulker/efsane-atistirmalik-paketi-p-32150980">Ulker Efsane Atistirmalik Paketi</a></li>
+  <li><a href="https://www.trendyol.com/ulker/sutlu-pul-kuvertur-cikolata-eks-201-2-5-kg-p-41674124">Ulker Sutlu Pul Kuvertur Cikolata</a></li>
+  <li><a href="https://www.trendyol.com/ulker/cikolata-all-star-paketi-p-37759574">Ulker Cikolata All-star Paketi</a></li>
+</ol>
+
 <h2 id="progress-of-the-project">Progress of the Project:</h2>
 
 <ul class="task-list">
@@ -325,12 +332,15 @@ section of three different products.</p>
       <li>Utilized Selenium and BeautifulSoup</li>
     </ol>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  browser = webdriver.Chrome(ChromeDriverManager().install())
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # open the browser 
+  browser = webdriver.Chrome(ChromeDriverManager().install())
   browser.maximize_window()
   browser.get(url)
 </code></pre></div>    </div>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>time.sleep(10)
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # load the page and manually sort comments, 
+ # then scroll down automatically
+ time.sleep(10)
  while i &lt; loop:
      browser.execute_script("window.scrollBy(0, 700);")
      time.sleep(0.8)
@@ -340,7 +350,64 @@ section of three different products.</p>
  html = browser.page_source
  soup = BeautifulSoup(html, 'lxml')
 </code></pre></div>    </div>
-    <h2 id="complications-and-problems">Complications and Problems:</h2>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # Get the reviews 
+ brand = soup.find('div', class_='seller-name-text')
+ brand_score = soup.find('div', class_='sl-pn')
+
+ time.sleep(0.8)
+
+ browser.execute_script("window.scrollBy(0, 400);")
+ time.sleep(1)
+ competitors = soup.findAll('div', class_='merchant-name-container')
+
+ time.sleep(1)
+ reviews = soup.find_all('div', class_='rnr-com-w')
+</code></pre></div>    </div>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # store data in arrays 
+ for r in reviews:
+     django_logger.debug(f' Review number: {i}')
+     i += 1
+     review_div = r.find_all('div', class_='rnr-com-tx')
+     for r_div in review_div:
+         django_logger.debug(f' Review text: {r_div.text}')
+         revs_arr.append(r_div.text)
+
+     review_date = r.find_all('span', class_='rnr-com-usr')
+     for r_date in review_date:
+         date_review = r_date.text.split('|')[1]
+         django_logger.debug(f' Review text: {date_review}')
+         dates_arr.append(convert(date_review))
+
+     review_shop = r.find_all('span', class_='seller-name-info')
+     for r_shop in review_shop:
+         django_logger.debug(f'store: {r_shop.text}')
+         shops_arr.append(r_shop.text)
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Here is an example screenshot from the comments that were scraped:</p>
+
+<p><img src="http://localhost:4000/website-sg3390/assets/images/ex_ss.jpg" alt="Unsplash image 9" /></p>
+
+<p>Here is a screenshot showing how the data is stored in Excel Files:</p>
+
+<p><img src="http://localhost:4000/website-sg3390/assets/images/excel_ss.png" alt="Unsplash image 0" /></p>
+
+<h2 id="complications-and-problems">Complications and Problems:</h2>
+
+<ol>
+  <li>
+    <p>Sorting the comments 
+After automatically opening up the browser, we manually have to sort the comments from the drop-down menu.</p>
+  </li>
+  <li>
+    <p>Obtaining the rating of the product in each review 
+The html parsing of the stars are complicated to parse through. Here is a screenshot for how they are represented: 
+<img src="http://localhost:4000/website-sg3390/assets/images/ss_html.png" alt="Unsplash image 1" />
+So each star has an empty and full component and they are present in both cases.</p>
   </li>
 </ol>
 
