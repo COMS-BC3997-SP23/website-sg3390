@@ -24,7 +24,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Project Update Presentation",
-        "excerpt":"This page contains a presentation of everything that has been completed in this project so far. What is the project? The goal of this project is to compare the reviews of three different products, produced from the same manufacturer and sold by different merchandisers. The manufacturer is Ulker (a leading...","categories": ["Presentation"],
+        "excerpt":"This is a presentation of everything that has been completed in this project so far. What is the project? The goal of this project is to compare the reviews of three different products, produced from the same manufacturer and sold by different merchandisers. The manufacturer is Ulker (a leading food...","categories": ["Presentation"],
         "tags": [],
         "url": "/website-sg3390/presentation/midway-update/",
         "teaser": null

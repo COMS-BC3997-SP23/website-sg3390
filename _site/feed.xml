@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/website-sg3390/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/website-sg3390/" rel="alternate" type="text/html" /><updated>2023-03-19T15:56:37-04:00</updated><id>http://localhost:4000/website-sg3390/feed.xml</id><title type="html">Serra’s Project Updates</title><subtitle>Weekly updates are below.</subtitle><author><name>Serra Goker</name></author><entry><title type="html">Project Update Presentation</title><link href="http://localhost:4000/website-sg3390/presentation/midway-update/" rel="alternate" type="text/html" title="Project Update Presentation" /><published>2023-03-15T00:00:00-04:00</published><updated>2023-03-15T00:00:00-04:00</updated><id>http://localhost:4000/website-sg3390/presentation/midway-update</id><content type="html" xml:base="http://localhost:4000/website-sg3390/presentation/midway-update/"><![CDATA[<h4 id="this-page-contains-a-presentation-of-everything-that-has-been-completed-in-this-project-so-far">This page contains a presentation of everything that has been completed in this project so far.</h4>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/website-sg3390/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/website-sg3390/" rel="alternate" type="text/html" /><updated>2023-03-20T12:57:51-04:00</updated><id>http://localhost:4000/website-sg3390/feed.xml</id><title type="html">Serra’s Project Updates</title><subtitle>Weekly updates are below.</subtitle><author><name>Serra Goker</name></author><entry><title type="html">Project Update Presentation</title><link href="http://localhost:4000/website-sg3390/presentation/midway-update/" rel="alternate" type="text/html" title="Project Update Presentation" /><published>2023-03-15T00:00:00-04:00</published><updated>2023-03-15T00:00:00-04:00</updated><id>http://localhost:4000/website-sg3390/presentation/midway-update</id><content type="html" xml:base="http://localhost:4000/website-sg3390/presentation/midway-update/"><![CDATA[<h4 id="this-is-a-presentation-of-everything-that-has-been-completed-in-this-project-so-far-"><span style="color:DarkMagenta">This is a presentation of everything that has been completed in this project so far. </span></h4>
 
-<h2 id="what-is-the-project">What is the project?</h2>
+<h2 id="what-is-the-project-"><span style="color:PaleVioletRed">What is the project? </span></h2>
 
 <p>The goal of this project is to compare the reviews of three different products, produced from the same manufacturer 
 and sold by different merchandisers. The manufacturer is Ulker (a leading food company in Turkey famous for its sweet
@@ -16,7 +16,7 @@ section of three different products.</p>
   <li><a href="https://www.trendyol.com/ulker/cikolata-all-star-paketi-p-37759574">Ulker Cikolata All-star Paketi</a></li>
 </ol>
 
-<h2 id="progress-of-the-project">Progress of the Project:</h2>
+<h2 id="progress-of-the-project"><span style="color:PaleVioletRed">Progress of the Project</span></h2>
 
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Identify the products to be used in analysis</li>
@@ -27,67 +27,63 @@ section of three different products.</p>
 </ul>
 
 <ol>
-  <li>
-    <p>Products Used in Analysis:</p>
-  </li>
-  <li>
-    <p>Codes Implemented for Web Scraping:</p>
+  <li>Codes Implemented for Web Scraping:
     <ol>
       <li>Utilized Selenium and BeautifulSoup</li>
     </ol>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # open the browser 
-  browser = webdriver.Chrome(ChromeDriverManager().install())
-  browser.maximize_window()
-  browser.get(url)
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># open the browser 
+</span>  <span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="p">.</span><span class="nc">Chrome</span><span class="p">(</span><span class="nc">ChromeDriverManager</span><span class="p">().</span><span class="nf">install</span><span class="p">())</span>
+  <span class="n">browser</span><span class="p">.</span><span class="nf">maximize_window</span><span class="p">()</span>
+  <span class="n">browser</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 </code></pre></div>    </div>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # load the page and manually sort comments, 
- # then scroll down automatically
- time.sleep(10)
- while i &lt; loop:
-     browser.execute_script("window.scrollBy(0, 700);")
-     time.sleep(0.8)
-     i += 1
-     django_logger.debug(f' Loop number: {i}')
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># load the page and manually sort comments, 
+</span> <span class="c1"># then scroll down automatically
+</span> <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+ <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">loop</span><span class="p">:</span>
+     <span class="n">browser</span><span class="p">.</span><span class="nf">execute_script</span><span class="p">(</span><span class="s">"window.scrollBy(0, 700);"</span><span class="p">)</span>
+     <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mf">0.8</span><span class="p">)</span>
+     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+     <span class="n">django_logger</span><span class="p">.</span><span class="nf">debug</span><span class="p">(</span><span class="sa">f</span><span class="s">' Loop number: </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
 
- html = browser.page_source
- soup = BeautifulSoup(html, 'lxml')
+ <span class="n">html</span> <span class="o">=</span> <span class="n">browser</span><span class="p">.</span><span class="n">page_source</span>
+ <span class="n">soup</span> <span class="o">=</span> <span class="nc">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s">'lxml'</span><span class="p">)</span>
 </code></pre></div>    </div>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # Get the reviews 
- brand = soup.find('div', class_='seller-name-text')
- brand_score = soup.find('div', class_='sl-pn')
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># Get the reviews 
+</span> <span class="n">brand</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="s">'div'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">'seller-name-text'</span><span class="p">)</span>
+ <span class="n">brand_score</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="s">'div'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">'sl-pn'</span><span class="p">)</span>
 
- time.sleep(0.8)
+ <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mf">0.8</span><span class="p">)</span>
 
- browser.execute_script("window.scrollBy(0, 400);")
- time.sleep(1)
- competitors = soup.findAll('div', class_='merchant-name-container')
+ <span class="n">browser</span><span class="p">.</span><span class="nf">execute_script</span><span class="p">(</span><span class="s">"window.scrollBy(0, 400);"</span><span class="p">)</span>
+ <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+ <span class="n">competitors</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="nf">findAll</span><span class="p">(</span><span class="s">'div'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">'merchant-name-container'</span><span class="p">)</span>
 
- time.sleep(1)
- reviews = soup.find_all('div', class_='rnr-com-w')
+ <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+ <span class="n">reviews</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="nf">find_all</span><span class="p">(</span><span class="s">'div'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">'rnr-com-w'</span><span class="p">)</span>
 </code></pre></div>    </div>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # store data in arrays 
- for r in reviews:
-     django_logger.debug(f' Review number: {i}')
-     i += 1
-     review_div = r.find_all('div', class_='rnr-com-tx')
-     for r_div in review_div:
-         django_logger.debug(f' Review text: {r_div.text}')
-         revs_arr.append(r_div.text)
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># store data in arrays 
+</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">reviews</span><span class="p">:</span>
+     <span class="n">django_logger</span><span class="p">.</span><span class="nf">debug</span><span class="p">(</span><span class="sa">f</span><span class="s">' Review number: </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+     <span class="n">review_div</span> <span class="o">=</span> <span class="n">r</span><span class="p">.</span><span class="nf">find_all</span><span class="p">(</span><span class="s">'div'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">'rnr-com-tx'</span><span class="p">)</span>
+     <span class="k">for</span> <span class="n">r_div</span> <span class="ow">in</span> <span class="n">review_div</span><span class="p">:</span>
+         <span class="n">django_logger</span><span class="p">.</span><span class="nf">debug</span><span class="p">(</span><span class="sa">f</span><span class="s">' Review text: </span><span class="si">{</span><span class="n">r_div</span><span class="p">.</span><span class="n">text</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+         <span class="n">revs_arr</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">r_div</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
 
-     review_date = r.find_all('span', class_='rnr-com-usr')
-     for r_date in review_date:
-         date_review = r_date.text.split('|')[1]
-         django_logger.debug(f' Review text: {date_review}')
-         dates_arr.append(convert(date_review))
+     <span class="n">review_date</span> <span class="o">=</span> <span class="n">r</span><span class="p">.</span><span class="nf">find_all</span><span class="p">(</span><span class="s">'span'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">'rnr-com-usr'</span><span class="p">)</span>
+     <span class="k">for</span> <span class="n">r_date</span> <span class="ow">in</span> <span class="n">review_date</span><span class="p">:</span>
+         <span class="n">date_review</span> <span class="o">=</span> <span class="n">r_date</span><span class="p">.</span><span class="n">text</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">'|'</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+         <span class="n">django_logger</span><span class="p">.</span><span class="nf">debug</span><span class="p">(</span><span class="sa">f</span><span class="s">' Review text: </span><span class="si">{</span><span class="n">date_review</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+         <span class="n">dates_arr</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="nf">convert</span><span class="p">(</span><span class="n">date_review</span><span class="p">))</span>
 
-     review_shop = r.find_all('span', class_='seller-name-info')
-     for r_shop in review_shop:
-         django_logger.debug(f'store: {r_shop.text}')
-         shops_arr.append(r_shop.text)
+     <span class="n">review_shop</span> <span class="o">=</span> <span class="n">r</span><span class="p">.</span><span class="nf">find_all</span><span class="p">(</span><span class="s">'span'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">'seller-name-info'</span><span class="p">)</span>
+     <span class="k">for</span> <span class="n">r_shop</span> <span class="ow">in</span> <span class="n">review_shop</span><span class="p">:</span>
+         <span class="n">django_logger</span><span class="p">.</span><span class="nf">debug</span><span class="p">(</span><span class="sa">f</span><span class="s">'store: </span><span class="si">{</span><span class="n">r_shop</span><span class="p">.</span><span class="n">text</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+         <span class="n">shops_arr</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">r_shop</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
 </code></pre></div>    </div>
   </li>
 </ol>
@@ -100,22 +96,33 @@ section of three different products.</p>
 
 <p><img src="http://localhost:4000/website-sg3390/assets/images/excel_ss.png" alt="Unsplash image 0" /></p>
 
-<h2 id="complications-and-problems">Complications and Problems:</h2>
+<h2 id="complications-and-problems-"><span style="color:PaleVioletRed">Complications and Problems: </span></h2>
 
 <ol>
   <li>
     <p>Sorting the comments 
-After automatically opening up the browser, we manually have to sort the comments from the drop-down menu.</p>
+After automatically opening up the browser, we manually have to sort the comments from the drop-down menu. This is 
+necessary to automate the process fully later on in the project.</p>
   </li>
   <li>
     <p>Obtaining the rating of the product in each review 
 The html parsing of the stars are complicated to parse through. Here is a screenshot for how they are represented: 
 <img src="http://localhost:4000/website-sg3390/assets/images/ss_html.png" alt="Unsplash image 1" />
-So each star has an empty and full component and they are present in both cases.</p>
+Each star has an empty and full component, and they are present in both cases. I am now looking for a way to count 
+the stars that are actually full.</p>
   </li>
 </ol>
 
-<h2 id="next-steps">Next Steps:</h2>]]></content><author><name>Serra Goker</name></author><category term="Presentation" /><summary type="html"><![CDATA[This page contains a presentation of everything that has been completed in this project so far.]]></summary></entry><entry><title type="html">Update 3</title><link href="http://localhost:4000/website-sg3390/update-3/" rel="alternate" type="text/html" title="Update 3" /><published>2023-02-24T00:00:00-05:00</published><updated>2023-02-24T00:00:00-05:00</updated><id>http://localhost:4000/website-sg3390/update-3</id><content type="html" xml:base="http://localhost:4000/website-sg3390/update-3/"><![CDATA[<h2 id="update-week-4">Update Week 4</h2>
+<h2 id="next-steps---"><span style="color:PaleVioletRed">Next Steps:   </span></h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Build an API to post the data tables
+    <ul>
+      <li>Any recommendations?</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Automate the process of scraping the data and posting to the API</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Analyze the differences of the data (waiting on further information from my supervisor)</li>
+</ul>]]></content><author><name>Serra Goker</name></author><category term="Presentation" /><summary type="html"><![CDATA[This is a presentation of everything that has been completed in this project so far.]]></summary></entry><entry><title type="html">Update 3</title><link href="http://localhost:4000/website-sg3390/update-3/" rel="alternate" type="text/html" title="Update 3" /><published>2023-02-24T00:00:00-05:00</published><updated>2023-02-24T00:00:00-05:00</updated><id>http://localhost:4000/website-sg3390/update-3</id><content type="html" xml:base="http://localhost:4000/website-sg3390/update-3/"><![CDATA[<h2 id="update-week-4">Update Week 4</h2>
 
 <h3 id="identifying-and-scraping-competitor-products">Identifying and scraping competitor products</h3>
 
