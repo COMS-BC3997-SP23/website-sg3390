@@ -30,7 +30,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Update 4",
-        "excerpt":"Update 4 The API Works! This week I managed to get my API to work and post the data I scraped. I am using the Django Rest-Framework to structure my API. Within the framework I created a table model to easily sort/modify the data I upload into the API. During...","categories": ["Updates"],
+        "excerpt":"The API Works! This week I managed to get my API to work and post the data I scraped. I am using the Django Rest-Framework to structure my API. Within the framework I created a table model to easily sort/modify the data I upload into the API. During the implementation...","categories": ["Updates"],
         "tags": [],
         "url": "/website-sg3390/updates/update-4/",
         "teaser": null
