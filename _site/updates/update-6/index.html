@@ -1,0 +1,760 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Update 6 - Serra’s Project Updates</title>
+<meta name="description" content="This week I primarily worked on data analysis. To start the analysis I first concatenated all of my text data to a  string array. Then utilizing the nltk library- which is a library commonly used for text processing- I tokenized my  text. This was helpful because the data contained a lot of emojis and random characters. After that, I wanted to  obtain the most frequent words that appear in my text so that I can assign sentiment values.">
+
+
+  <meta name="author" content="Serra Goker">
+  
+  <meta property="article:author" content="Serra Goker">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Serra's Project Updates">
+<meta property="og:title" content="Update 6">
+<meta property="og:url" content="http://localhost:4000/website-sg3390/updates/update-6/">
+
+
+  <meta property="og:description" content="This week I primarily worked on data analysis. To start the analysis I first concatenated all of my text data to a  string array. Then utilizing the nltk library- which is a library commonly used for text processing- I tokenized my  text. This was helpful because the data contained a lot of emojis and random characters. After that, I wanted to  obtain the most frequent words that appear in my text so that I can assign sentiment values.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2023-04-10T00:00:00-04:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/website-sg3390/updates/update-6/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Serra Goker",
+      "url": "http://localhost:4000/website-sg3390/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/website-sg3390/feed.xml" type="application/atom+xml" rel="alternate" title="Serra's Project Updates Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/website-sg3390/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/website-sg3390/">
+          Serra's Project Updates
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/about/">Weekly Updates</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/website-sg3390/">
+        <img src="/website-sg3390/assets/images/serra_image.jpg" alt="Serra Goker" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/website-sg3390/" itemprop="url">Serra Goker</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>This is the website for Serra Goker’s COMS-BC3997 Project Updates</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Barnard College, New York</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Update 6">
+    <meta itemprop="description" content="This week I primarily worked on data analysis. To start the analysis I first concatenated all of my text data to a string array. Then utilizing the nltk library- which is a library commonly used for text processing- I tokenized my text. This was helpful because the data contained a lot of emojis and random characters. After that, I wanted to obtain the most frequent words that appear in my text so that I can assign sentiment values.">
+    <meta itemprop="datePublished" content="2023-04-10T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/website-sg3390/updates/update-6/" class="u-url" itemprop="url">Update 6
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <p>This week I primarily worked on data analysis. To start the analysis I first concatenated all of my text data to a 
+string array. Then utilizing the nltk library- which is a library commonly used for text processing- I tokenized my 
+text. This was helpful because the data contained a lot of emojis and random characters. After that, I wanted to 
+obtain the most frequent words that appear in my text so that I can assign sentiment values.</p>
+
+<p>Unfortunately, I decided not to move forward with the pre-set Turkish sentiment analysis tools, because they haven’t 
+yielded accurate representations of colloquial Turkish phrases. The project I am working on requires sentiment 
+scores for colloquial phrases as it is sourced from the comments section of an e-commerce website.</p>
+
+<p>After tokenizing the text and getting the single word frequencies, I decided that it would be a good approach to 
+also look at longer expressions consisting of 2-3 words as well. Since many single word phrases don’t give out a 
+clear sentiment. Hence, I obtained bigrams and trigrams again using the nltk library.</p>
+
+<p>Here are the top 50 words that appear in my text corpus:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # Unigram Frequencies
+ [('çok', 130),
+ ('.', 114),
+ ('güzel', 93),
+ ('geldi', 55),
+ (',', 40),
+ ('bir', 37),
+ ('aldım', 36),
+ ('Çok', 35),
+ ('ve', 34),
+ ('ederim', 32),
+ ('ürün', 31),
+ ('iyi', 28),
+ ('gibi', 25),
+ ('Ülker', 25),
+ ('lezzetli', 21),
+ ('teşekkür', 21),
+ ('hediye', 20),
+ ('kargo', 20),
+ ('paket', 20),
+ ('olarak', 19),
+ ('teşekkürler', 19),
+ ('için', 19),
+ ('beğendim', 18),
+ ('ama', 17),
+ ('tarihi', 17),
+ ('tavsiye', 16),
+ ('harika', 16),
+ ('daha', 16),
+ ('tek', 15),
+ ('tadı', 15),
+ ('bu', 14),
+ ('çikolata', 14),
+ ('son', 14),
+ ('uygun', 13),
+ ('hızlı', 13),
+ ('gayet', 13),
+ ('kalitesi', 13),
+ ('kullanma', 13),
+ ('fiyat', 12),
+ ('Ürün', 12),
+ ('almıştım', 12),
+ ('cok', 12),
+ ('elime', 12),
+ ('ulaştı', 12),
+ ('güzeldi', 11),
+ ('tam', 11),
+ ('şekilde', 11),
+ ('paketleme', 11),
+ ('hepsi', 10),
+ ('de', 10)]
+</code></pre></div></div>
+
+<p>Here are the bigram frequencies:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [(('teşekkür', 'ederim'), 16), 
+ (('tavsiye', 'ederim'), 15), 
+ (('gibi', 'geldi'), 12), 
+ (('kullanma', 'tarihi'), 10), 
+ (('Ülker', 'kalitesi'), 10), 
+ (('son', 'kullanma'), 9), 
+ (('bir', 'şekilde'), 7), 
+ (('elime', 'ulaştı'), 6), 
+ (('hızlı', 'kargo'), 6), 
+ (('memnun', 'kaldım'), 5), 
+ (('tek', 'tek'), 5), 
+ (('göründüğü', 'gibi'), 4), 
+ (('Hızlı', 'kargo'), 4), 
+ (('uygun', 'fiyata'), 4), 
+ (('tarihi', 'yakın'), 4), 
+ (('kahve', 'yanında'), 3),
+ (('güvenilir', 'satıcı'), 3), 
+ ((':', ')'), 3), 
+ (('sağlam', 'paketlenmiş'), 3),
+ (('mutlu', 'oldu'), 3), 
+ (('istediğim', 'gibi'), 3), 
+ (('biraz', 'daha'), 3), 
+ (('daha', 'büyük'), 3), 
+ (('Fiyatına', 'göre'), 2), 
+ (('hesapliya', 'denk'), 2), 
+ (('on', 'numara'), 2), 
+ (('TL', 'ye'), 2), 
+ (('good', 'good'), 2), 
+ (('pul', 'şeklinde'), 2), 
+ (('Daha', 'önce'), 2), 
+ (('sipariş', 'vericem'), 2), 
+ (('uzun', 'süre'), 2), 
+ (('Ay', '2023'), 2), 
+ (('memnun', 'kaldık'), 2), 
+ (('!', '!'), 2),
+ (('5', 'yıldız'), 2), 
+ (('hepsi', 'birbirinden'), 2), 
+ (('ürünlerin', 'hepsi'), 2), 
+ (('tekrar', 'sipariş'), 2), 
+ (('uyguna', 'geliyor'), 2), 
+ (('tek', 'kelimeyle'), 2), 
+ (('tarihine', 'de'), 2), 
+ (('kelimeyle', 'harika'), 2), 
+ (('Eylül', '2023'), 2), 
+ (('Son', 'kullanma'), 2), 
+ (('kalitesi', 'tartışılmaz'), 2), 
+ (('Kardeşime', 'hediye'), 2), 
+ (('Sevgilime', 'hediye'), 2), 
+ (('arkadaşıma', 'hediye'), 2), 
+ (('yakın', 'değil'), 2)]
+
+</code></pre></div></div>
+
+<p>And lastly the trigram frequencies:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [(('son', 'kullanma', 'tarihi'), 7),
+ (('göründüğü', 'gibi', 'geldi'), 4),
+ (('olarak', 'aldım', 'çok'), 4),
+ (('istediğim', 'gibi', 'geldi'), 3),
+ (('de', 'çok', 'var'), 3),
+ (('hediye', 'olarak', 'aldım'), 3),
+ (('olarak', 'gönderdim', 'çok'), 3),
+ (('bir', 'şekilde', 'geldi'), 3),
+ (('aldım', 'çok', 'beğendi'), 3),
+ (('tekrar', 'sipariş', 'vericem'), 2),
+ (('denk', 'geldi', 'alinir'), 2),
+ (('hesapliya', 'denk', 'geldi'), 2),
+ (('Ay', '2023', 'olarak'), 2),
+ (('biraz', 'daha', 'büyük'), 2),
+ (('tek', 'kelimeyle', 'harika'), 2),
+ (('çok', 'hesapliya', 'denk'), 2),
+ (('Ülker', 'kalitesi', 'tartışılmaz'), 2),
+ (('Kesinlikle', 'tavsiye', 'ederim'), 2),
+ (('.', 'Ay', '2023'), 2),
+ (('kullanma', 'tarihi', 'yakın'), 2),
+ (('hepsi', 'birbirinden', 'güzel'), 2),
+ (('iyi', 'İndirimden', 'aldım'), 2),
+ (('kullanma', 'tarihi', 'de'), 2),
+ (('hediye', 'olarak', 'gönderdim'), 2),
+ (('tavsiye', 'ederim', 'Güzeldi'), 2),
+ (('satıcıya', 'teşekkür', 'ederim'), 2),
+ (('hediyesi', 'olarak', 'aldım'), 2),
+ (('eksiksiz', 'bir', 'şekilde'), 2),
+ (('ürün', 'göründüğü', 'gibi'), 2),
+ (('teşekkür', 'ederim', 'ülker'), 2),
+ (('sorunsuz', 'bir', 'şekilde'), 2),
+ (('güzel', 'sağlam', 'paketlenmiş'), 2),
+ (('gönderdim', 'çok', 'mutlu'), 2),
+ (('tarihine', 'de', 'çok'), 2),
+ (('fiyata', 'aldık', '.'), 2),
+ (('.', 'Kesinlikle', 'tavsiye'), 2),
+ (('çok', 'mutlu', 'oldu'), 2),
+ (('ürünler', 'tam', 'geldi'), 2),
+ (('çok', 'iyi', 'İndirimden'), 2),
+ (('teşekkür', 'ederim', 'Ülker'), 2),
+ (('teşekkür', 'ederim', 'Çok'), 2),
+ (('geldi', 'tavsiye', 'ederim'), 2),
+ (('elime', 'ulaştı', 'çok'), 2),
+ (('ve', 'sağlam', 'geldi'), 2),
+ (('tarihi', 'çok', 'yakın'), 2),
+ (('geldi', 'teşekkür', 'ederim'), 2),
+ (('iyi', 'bir', 'paket'), 2),
+ (('guzel', 'çok', 'iyi'), 2),
+ (('hızlı', 'kargo', 'güzel'), 2),
+ (('.', 'Ülker', 'kalitesi'), 2)]
+</code></pre></div></div>
+
+<p>I will now go ahead and assign these positive or negative scores and compare how they vary by company.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/website-sg3390/categories/#updates" class="page__taxonomy-item p-category" rel="tag">Updates</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-04-10T00:00:00-04:00">April 10, 2023</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Update+6%20http%3A%2F%2Flocalhost%3A4000%2Fwebsite-sg3390%2Fupdates%2Fupdate-6%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fwebsite-sg3390%2Fupdates%2Fupdate-6%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fwebsite-sg3390%2Fupdates%2Fupdate-6%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/website-sg3390/updates/update-5/" class="pagination--pager" title="Update 5
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/website-sg3390/updates/update-5/" rel="permalink">Update 5
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Update 5 
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/website-sg3390/updates/update-4/" rel="permalink">Update 4
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The API Works! 
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/website-sg3390/presentation/midway-update/" rel="permalink">Project Update Presentation
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is a presentation of everything that has been completed in this project so far. 
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/website-sg3390/update-3/" rel="permalink">Update 3
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Update Week 4
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/website-sg3390/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Serra Goker. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/website-sg3390/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,4 +1,185 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/website-sg3390/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/website-sg3390/" rel="alternate" type="text/html" /><updated>2023-03-27T18:47:53-04:00</updated><id>http://localhost:4000/website-sg3390/feed.xml</id><title type="html">Serra’s Project Updates</title><subtitle>Weekly updates are below.</subtitle><author><name>Serra Goker</name></author><entry><title type="html">Update 4</title><link href="http://localhost:4000/website-sg3390/updates/update-4/" rel="alternate" type="text/html" title="Update 4" /><published>2023-03-26T00:00:00-04:00</published><updated>2023-03-26T00:00:00-04:00</updated><id>http://localhost:4000/website-sg3390/updates/update-4</id><content type="html" xml:base="http://localhost:4000/website-sg3390/updates/update-4/"><![CDATA[<h2 id="the-api-works-"><span style="color:PaleVioletRed">The API Works! </span></h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/website-sg3390/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/website-sg3390/" rel="alternate" type="text/html" /><updated>2023-04-10T12:57:51-04:00</updated><id>http://localhost:4000/website-sg3390/feed.xml</id><title type="html">Serra’s Project Updates</title><subtitle>Weekly updates are below.</subtitle><author><name>Serra Goker</name></author><entry><title type="html">Update 6</title><link href="http://localhost:4000/website-sg3390/updates/update-6/" rel="alternate" type="text/html" title="Update 6" /><published>2023-04-10T00:00:00-04:00</published><updated>2023-04-10T00:00:00-04:00</updated><id>http://localhost:4000/website-sg3390/updates/update-6</id><content type="html" xml:base="http://localhost:4000/website-sg3390/updates/update-6/"><![CDATA[<p>This week I primarily worked on data analysis. To start the analysis I first concatenated all of my text data to a 
+string array. Then utilizing the nltk library- which is a library commonly used for text processing- I tokenized my 
+text. This was helpful because the data contained a lot of emojis and random characters. After that, I wanted to 
+obtain the most frequent words that appear in my text so that I can assign sentiment values.</p>
+
+<p>Unfortunately, I decided not to move forward with the pre-set Turkish sentiment analysis tools, because they haven’t 
+yielded accurate representations of colloquial Turkish phrases. The project I am working on requires sentiment 
+scores for colloquial phrases as it is sourced from the comments section of an e-commerce website.</p>
+
+<p>After tokenizing the text and getting the single word frequencies, I decided that it would be a good approach to 
+also look at longer expressions consisting of 2-3 words as well. Since many single word phrases don’t give out a 
+clear sentiment. Hence, I obtained bigrams and trigrams again using the nltk library.</p>
+
+<p>Here are the top 50 words that appear in my text corpus:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # Unigram Frequencies
+ [('çok', 130),
+ ('.', 114),
+ ('güzel', 93),
+ ('geldi', 55),
+ (',', 40),
+ ('bir', 37),
+ ('aldım', 36),
+ ('Çok', 35),
+ ('ve', 34),
+ ('ederim', 32),
+ ('ürün', 31),
+ ('iyi', 28),
+ ('gibi', 25),
+ ('Ülker', 25),
+ ('lezzetli', 21),
+ ('teşekkür', 21),
+ ('hediye', 20),
+ ('kargo', 20),
+ ('paket', 20),
+ ('olarak', 19),
+ ('teşekkürler', 19),
+ ('için', 19),
+ ('beğendim', 18),
+ ('ama', 17),
+ ('tarihi', 17),
+ ('tavsiye', 16),
+ ('harika', 16),
+ ('daha', 16),
+ ('tek', 15),
+ ('tadı', 15),
+ ('bu', 14),
+ ('çikolata', 14),
+ ('son', 14),
+ ('uygun', 13),
+ ('hızlı', 13),
+ ('gayet', 13),
+ ('kalitesi', 13),
+ ('kullanma', 13),
+ ('fiyat', 12),
+ ('Ürün', 12),
+ ('almıştım', 12),
+ ('cok', 12),
+ ('elime', 12),
+ ('ulaştı', 12),
+ ('güzeldi', 11),
+ ('tam', 11),
+ ('şekilde', 11),
+ ('paketleme', 11),
+ ('hepsi', 10),
+ ('de', 10)]
+</code></pre></div></div>
+
+<p>Here are the bigram frequencies:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [(('teşekkür', 'ederim'), 16), 
+ (('tavsiye', 'ederim'), 15), 
+ (('gibi', 'geldi'), 12), 
+ (('kullanma', 'tarihi'), 10), 
+ (('Ülker', 'kalitesi'), 10), 
+ (('son', 'kullanma'), 9), 
+ (('bir', 'şekilde'), 7), 
+ (('elime', 'ulaştı'), 6), 
+ (('hızlı', 'kargo'), 6), 
+ (('memnun', 'kaldım'), 5), 
+ (('tek', 'tek'), 5), 
+ (('göründüğü', 'gibi'), 4), 
+ (('Hızlı', 'kargo'), 4), 
+ (('uygun', 'fiyata'), 4), 
+ (('tarihi', 'yakın'), 4), 
+ (('kahve', 'yanında'), 3),
+ (('güvenilir', 'satıcı'), 3), 
+ ((':', ')'), 3), 
+ (('sağlam', 'paketlenmiş'), 3),
+ (('mutlu', 'oldu'), 3), 
+ (('istediğim', 'gibi'), 3), 
+ (('biraz', 'daha'), 3), 
+ (('daha', 'büyük'), 3), 
+ (('Fiyatına', 'göre'), 2), 
+ (('hesapliya', 'denk'), 2), 
+ (('on', 'numara'), 2), 
+ (('TL', 'ye'), 2), 
+ (('good', 'good'), 2), 
+ (('pul', 'şeklinde'), 2), 
+ (('Daha', 'önce'), 2), 
+ (('sipariş', 'vericem'), 2), 
+ (('uzun', 'süre'), 2), 
+ (('Ay', '2023'), 2), 
+ (('memnun', 'kaldık'), 2), 
+ (('!', '!'), 2),
+ (('5', 'yıldız'), 2), 
+ (('hepsi', 'birbirinden'), 2), 
+ (('ürünlerin', 'hepsi'), 2), 
+ (('tekrar', 'sipariş'), 2), 
+ (('uyguna', 'geliyor'), 2), 
+ (('tek', 'kelimeyle'), 2), 
+ (('tarihine', 'de'), 2), 
+ (('kelimeyle', 'harika'), 2), 
+ (('Eylül', '2023'), 2), 
+ (('Son', 'kullanma'), 2), 
+ (('kalitesi', 'tartışılmaz'), 2), 
+ (('Kardeşime', 'hediye'), 2), 
+ (('Sevgilime', 'hediye'), 2), 
+ (('arkadaşıma', 'hediye'), 2), 
+ (('yakın', 'değil'), 2)]
+
+</code></pre></div></div>
+
+<p>And lastly the trigram frequencies:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [(('son', 'kullanma', 'tarihi'), 7),
+ (('göründüğü', 'gibi', 'geldi'), 4),
+ (('olarak', 'aldım', 'çok'), 4),
+ (('istediğim', 'gibi', 'geldi'), 3),
+ (('de', 'çok', 'var'), 3),
+ (('hediye', 'olarak', 'aldım'), 3),
+ (('olarak', 'gönderdim', 'çok'), 3),
+ (('bir', 'şekilde', 'geldi'), 3),
+ (('aldım', 'çok', 'beğendi'), 3),
+ (('tekrar', 'sipariş', 'vericem'), 2),
+ (('denk', 'geldi', 'alinir'), 2),
+ (('hesapliya', 'denk', 'geldi'), 2),
+ (('Ay', '2023', 'olarak'), 2),
+ (('biraz', 'daha', 'büyük'), 2),
+ (('tek', 'kelimeyle', 'harika'), 2),
+ (('çok', 'hesapliya', 'denk'), 2),
+ (('Ülker', 'kalitesi', 'tartışılmaz'), 2),
+ (('Kesinlikle', 'tavsiye', 'ederim'), 2),
+ (('.', 'Ay', '2023'), 2),
+ (('kullanma', 'tarihi', 'yakın'), 2),
+ (('hepsi', 'birbirinden', 'güzel'), 2),
+ (('iyi', 'İndirimden', 'aldım'), 2),
+ (('kullanma', 'tarihi', 'de'), 2),
+ (('hediye', 'olarak', 'gönderdim'), 2),
+ (('tavsiye', 'ederim', 'Güzeldi'), 2),
+ (('satıcıya', 'teşekkür', 'ederim'), 2),
+ (('hediyesi', 'olarak', 'aldım'), 2),
+ (('eksiksiz', 'bir', 'şekilde'), 2),
+ (('ürün', 'göründüğü', 'gibi'), 2),
+ (('teşekkür', 'ederim', 'ülker'), 2),
+ (('sorunsuz', 'bir', 'şekilde'), 2),
+ (('güzel', 'sağlam', 'paketlenmiş'), 2),
+ (('gönderdim', 'çok', 'mutlu'), 2),
+ (('tarihine', 'de', 'çok'), 2),
+ (('fiyata', 'aldık', '.'), 2),
+ (('.', 'Kesinlikle', 'tavsiye'), 2),
+ (('çok', 'mutlu', 'oldu'), 2),
+ (('ürünler', 'tam', 'geldi'), 2),
+ (('çok', 'iyi', 'İndirimden'), 2),
+ (('teşekkür', 'ederim', 'Ülker'), 2),
+ (('teşekkür', 'ederim', 'Çok'), 2),
+ (('geldi', 'tavsiye', 'ederim'), 2),
+ (('elime', 'ulaştı', 'çok'), 2),
+ (('ve', 'sağlam', 'geldi'), 2),
+ (('tarihi', 'çok', 'yakın'), 2),
+ (('geldi', 'teşekkür', 'ederim'), 2),
+ (('iyi', 'bir', 'paket'), 2),
+ (('guzel', 'çok', 'iyi'), 2),
+ (('hızlı', 'kargo', 'güzel'), 2),
+ (('.', 'Ülker', 'kalitesi'), 2)]
+</code></pre></div></div>
+
+<p>I will now go ahead and assign these positive or negative scores and compare how they vary by company.</p>]]></content><author><name>Serra Goker</name></author><category term="Updates" /><summary type="html"><![CDATA[This week I primarily worked on data analysis. To start the analysis I first concatenated all of my text data to a string array. Then utilizing the nltk library- which is a library commonly used for text processing- I tokenized my text. This was helpful because the data contained a lot of emojis and random characters. After that, I wanted to obtain the most frequent words that appear in my text so that I can assign sentiment values.]]></summary></entry><entry><title type="html">Update 5</title><link href="http://localhost:4000/website-sg3390/updates/update-5/" rel="alternate" type="text/html" title="Update 5" /><published>2023-04-03T00:00:00-04:00</published><updated>2023-04-03T00:00:00-04:00</updated><id>http://localhost:4000/website-sg3390/updates/update-5</id><content type="html" xml:base="http://localhost:4000/website-sg3390/updates/update-5/"><![CDATA[<h2 id="update-5-"><span style="color:Violet">Update 5 </span></h2>
+
+<p>I found a sentiment analysis model utilized for <a href="https://github.com/serkanars/turkishsentimentanalysis">Turkish text</a>. Rather than using a pretrained model, I would have to 
+train this model on my data and label certain expression as positive and negative. I am now going to go ahead and 
+identify expressions that I think is important to consider for sentiment. To make this process easier I have 
+produced a frequency diagram.</p>]]></content><author><name>Serra Goker</name></author><category term="Updates" /><summary type="html"><![CDATA[Update 5]]></summary></entry><entry><title type="html">Update 4</title><link href="http://localhost:4000/website-sg3390/updates/update-4/" rel="alternate" type="text/html" title="Update 4" /><published>2023-03-26T00:00:00-04:00</published><updated>2023-03-26T00:00:00-04:00</updated><id>http://localhost:4000/website-sg3390/updates/update-4</id><content type="html" xml:base="http://localhost:4000/website-sg3390/updates/update-4/"><![CDATA[<h2 id="the-api-works-"><span style="color:PaleVioletRed">The API Works! </span></h2>
 
 <p>This week I managed to get my API to work and post the data I scraped. I am using the <a href="https://www.django-rest-framework.org/">Django Rest-Framework</a> to structure my API. Within the framework I created a table model to easily 
 sort/modify the data I upload into the API. During the implementation stage, I got help from ChatGPT to structure my 

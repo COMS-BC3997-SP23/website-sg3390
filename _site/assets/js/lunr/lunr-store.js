@@ -34,4 +34,16 @@ var store = [{
         "tags": [],
         "url": "/website-sg3390/updates/update-4/",
         "teaser": null
+      },{
+        "title": "Update 5",
+        "excerpt":"Update 5 I found a sentiment analysis model utilized for Turkish text. Rather than using a pretrained model, I would have to train this model on my data and label certain expression as positive and negative. I am now going to go ahead and identify expressions that I think is...","categories": ["Updates"],
+        "tags": [],
+        "url": "/website-sg3390/updates/update-5/",
+        "teaser": null
+      },{
+        "title": "Update 6",
+        "excerpt":"This week I primarily worked on data analysis. To start the analysis I first concatenated all of my text data to a string array. Then utilizing the nltk library- which is a library commonly used for text processing- I tokenized my text. This was helpful because the data contained a...","categories": ["Updates"],
+        "tags": [],
+        "url": "/website-sg3390/updates/update-6/",
+        "teaser": null
       }]
