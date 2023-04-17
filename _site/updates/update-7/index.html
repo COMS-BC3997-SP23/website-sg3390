@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Update 1 - Serra’s Project Updates</title>
-<meta name="description" content="Update Week 2">
+<!-- begin _includes/seo.html --><title>Update 7 - Serra’s Project Updates</title>
+<meta name="description" content="Update 7  This week I worked on assigning scores to the most common expressions I obtained from my unigram, bigram, and  trigram models. Because I couldn’t find any pre-existing models on Turkish colloquial language, I assigned scores  individually to each expression. This will definitely be a constraint when I am doing the analysis and the  calculation of scores for each comment left on the products.">
 
 
   <meta name="author" content="Serra Goker">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Serra's Project Updates">
-<meta property="og:title" content="Update 1">
-<meta property="og:url" content="http://localhost:4000/website-sg3390/update-1/">
+<meta property="og:title" content="Update 7">
+<meta property="og:url" content="http://localhost:4000/website-sg3390/updates/update-7/">
 
 
-  <meta property="og:description" content="Update Week 2">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2023-02-15T00:00:00-05:00">
+  <meta property="og:description" content="Update 7  This week I worked on assigning scores to the most common expressions I obtained from my unigram, bigram, and  trigram models. Because I couldn’t find any pre-existing models on Turkish colloquial language, I assigned scores  individually to each expression. This will definitely be a constraint when I am doing the analysis and the  calculation of scores for each comment left on the products.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2023-04-17T00:00:00-04:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/website-sg3390/update-1/">
+
+<link rel="canonical" href="http://localhost:4000/website-sg3390/updates/update-7/">
 
 
 
@@ -256,16 +256,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Update 1">
-    <meta itemprop="description" content="Update Week 2">
-    <meta itemprop="datePublished" content="2023-02-15T00:00:00-05:00">
+    <meta itemprop="headline" content="Update 7">
+    <meta itemprop="description" content="Update 7 This week I worked on assigning scores to the most common expressions I obtained from my unigram, bigram, and trigram models. Because I couldn’t find any pre-existing models on Turkish colloquial language, I assigned scores individually to each expression. This will definitely be a constraint when I am doing the analysis and the calculation of scores for each comment left on the products.">
+    <meta itemprop="datePublished" content="2023-04-17T00:00:00-04:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/website-sg3390/update-1/" class="u-url" itemprop="url">Update 1
+            <a href="http://localhost:4000/website-sg3390/updates/update-7/" class="u-url" itemprop="url">Update 7
 </a>
           </h1>
           
@@ -294,35 +294,38 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <h2 id="update-week-2">Update Week 2</h2>
+        <h2 id="update-7-"><span style="color:Violet">Update 7 </span></h2>
+<p>This week I worked on assigning scores to the most common expressions I obtained from my unigram, bigram, and 
+trigram models. Because I couldn’t find any pre-existing models on Turkish colloquial language, I assigned scores 
+individually to each expression. This will definitely be a constraint when I am doing the analysis and the 
+calculation of scores for each comment left on the products.</p>
 
-<h3 id="tools-to-be-used-for-the-project">Tools to be used for the project</h3>
-
-<p>As mentioned in the proposal, this project will utilize web scraping tools to obtain data from websites. Web 
-scraping refers to the automated process of extracting data from website using software tools. For the scope of this 
-project I will utilize these tools:</p>
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="https://selenium-python.readthedocs.io/">Selenium</a></li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="https://pypi.org/project/beautifulsoup4/#:~:text=Beautiful%20Soup%20is%20a%20library,
-and%20modifying%20the%20parse%20tree.">beautifulsoup4</a></li>
+<p>The way I assigned scores was:</p>
+<ul>
+  <li>“+1” for positive expressions</li>
+  <li>“0” for neutral expressions</li>
+  <li>“-1” for negative expressions</li>
 </ul>
 
-<p>As the webpage that I am scraping has a dynamic comments section, the ChromeDriver package from Selenium opens up a 
-chrome browser run by the script. This script scrolls down to the comments section of the product. With the sleep 
-functionality of chromedriver, the browser freezes for 3 seconds before proceeding to scraping the comments. During 
-these three seconds, I click the sort comments by date dropdown to ease the process of refining the latest comments. 
-This is currently a loophole I am intending to fix, so that the scraping can be fully automated.</p>
+<p>Another challenge I faced surrounding the assignment of sentiment scores to expressions were that some expressions 
+were usually too short to produce sentiment. I could derive the sentiment from seeing the group of words used 
+together, however if the start of the bigram is a negation word than it would alter the whole meaning of the 
+expression and score. Hence, this analysis will only provide a preliminary insight into how sentiment scores change 
+depending on the seller.</p>
 
-<p>After sorting the comments, utilizing beautifulsoup4, I parsed the date, the text of the comment, and the seller 
-name. Another challenge that arose during this process was parsing the score of the review. The score of the review 
-is represented in the html as star icons filled in. I will be working furter on this challenge to come up with a way 
-to parse the scores as well.</p>
+<p>Furthermore, as I was assigning the scores to the expression, I realized that the ungiram scores tended to be more 
+neutral compared to the bigram and trigram scores. Likewise, the trigram scores were more variable in terms of 
+positivity and negativity compared to bigram scores. So as we increase the number of words in the n-grams it yields 
+a better understanding of the sentiment of the expressions.</p>
 
-<h4 id="to-do-for-next-time">To-do for next time:</h4>
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />automate date sorting</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />parse review scores</li>
-</ul>
+<p>As for the analysis of the sentiment scores in comments. I am now implementing an algorithm that searches for each 
+expression in the comment. If the search returns true, then the score of that expression will be added to the 
+sentiments overall score. Unfortunately, I don’t think this will be the most efficient algorithm to calculate the 
+sentence-based scores. So, I will be researching for better ways to do this.</p>
+
+<p>Here I will include a screenshot of the trigram sentiment scores in the Excel file:</p>
+
+<p><img src="http://localhost:4000/website-sg3390/assets/images/sentimentss.png" alt="Unsplash image 0" /></p>
 
         
       </section>
@@ -332,9 +335,24 @@ to parse the scores as well.</p>
         
 
 
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/website-sg3390/categories/#updates" class="page__taxonomy-item p-category" rel="tag">Updates</a>
+    
+    </span>
+  </p>
+
+
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-02-15T00:00:00-05:00">February 15, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-04-17T00:00:00-04:00">April 17, 2023</time></p>
 
       </footer>
 
@@ -343,23 +361,22 @@ to parse the scores as well.</p>
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Update+1%20http%3A%2F%2Flocalhost%3A4000%2Fwebsite-sg3390%2Fupdate-1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Update+7%20http%3A%2F%2Flocalhost%3A4000%2Fwebsite-sg3390%2Fupdates%2Fupdate-7%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fwebsite-sg3390%2Fupdate-1%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fwebsite-sg3390%2Fupdates%2Fupdate-7%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fwebsite-sg3390%2Fupdate-1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fwebsite-sg3390%2Fupdates%2Fupdate-7%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/website-sg3390/proposal/proposal/" class="pagination--pager" title="Project Proposal
+      <a href="/website-sg3390/updates/update-6/" class="pagination--pager" title="Update 6
 ">Previous</a>
     
     
-      <a href="/website-sg3390/update-2/" class="pagination--pager" title="Update 2
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -373,47 +390,6 @@ to parse the scores as well.</p>
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/website-sg3390/updates/update-7/" rel="permalink">Update 7
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Update 7 
-This week I worked on assigning scores to the most common expressions I obtained from my unigram, bigram, and 
-trigram models. Because I couldn’t f...</p>
-  </article>
-</div>
-
         
           
 
@@ -530,6 +506,46 @@ string array. Then utilizing the nltk lib...</p>
 
 
     <p class="archive__item-excerpt" itemprop="description">The API Works! 
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/website-sg3390/presentation/midway-update/" rel="permalink">Project Update Presentation
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is a presentation of everything that has been completed in this project so far. 
 </p>
   </article>
 </div>

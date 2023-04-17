@@ -46,4 +46,10 @@ var store = [{
         "tags": [],
         "url": "/website-sg3390/updates/update-6/",
         "teaser": null
+      },{
+        "title": "Update 7",
+        "excerpt":"Update 7 This week I worked on assigning scores to the most common expressions I obtained from my unigram, bigram, and trigram models. Because I couldn’t find any pre-existing models on Turkish colloquial language, I assigned scores individually to each expression. This will definitely be a constraint when I am...","categories": ["Updates"],
+        "tags": [],
+        "url": "/website-sg3390/updates/update-7/",
+        "teaser": null
       }]

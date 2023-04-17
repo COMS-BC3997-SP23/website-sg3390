@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/website-sg3390/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/website-sg3390/" rel="alternate" type="text/html" /><updated>2023-04-10T12:57:51-04:00</updated><id>http://localhost:4000/website-sg3390/feed.xml</id><title type="html">Serra’s Project Updates</title><subtitle>Weekly updates are below.</subtitle><author><name>Serra Goker</name></author><entry><title type="html">Update 6</title><link href="http://localhost:4000/website-sg3390/updates/update-6/" rel="alternate" type="text/html" title="Update 6" /><published>2023-04-10T00:00:00-04:00</published><updated>2023-04-10T00:00:00-04:00</updated><id>http://localhost:4000/website-sg3390/updates/update-6</id><content type="html" xml:base="http://localhost:4000/website-sg3390/updates/update-6/"><![CDATA[<p>This week I primarily worked on data analysis. To start the analysis I first concatenated all of my text data to a 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/website-sg3390/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/website-sg3390/" rel="alternate" type="text/html" /><updated>2023-04-17T13:00:25-04:00</updated><id>http://localhost:4000/website-sg3390/feed.xml</id><title type="html">Serra’s Project Updates</title><subtitle>Weekly updates are below.</subtitle><author><name>Serra Goker</name></author><entry><title type="html">Update 7</title><link href="http://localhost:4000/website-sg3390/updates/update-7/" rel="alternate" type="text/html" title="Update 7" /><published>2023-04-17T00:00:00-04:00</published><updated>2023-04-17T00:00:00-04:00</updated><id>http://localhost:4000/website-sg3390/updates/update-7</id><content type="html" xml:base="http://localhost:4000/website-sg3390/updates/update-7/"><![CDATA[<h2 id="update-7-"><span style="color:Violet">Update 7 </span></h2>
+<p>This week I worked on assigning scores to the most common expressions I obtained from my unigram, bigram, and 
+trigram models. Because I couldn’t find any pre-existing models on Turkish colloquial language, I assigned scores 
+individually to each expression. This will definitely be a constraint when I am doing the analysis and the 
+calculation of scores for each comment left on the products.</p>
+
+<p>The way I assigned scores was:</p>
+<ul>
+  <li>“+1” for positive expressions</li>
+  <li>“0” for neutral expressions</li>
+  <li>“-1” for negative expressions</li>
+</ul>
+
+<p>Another challenge I faced surrounding the assignment of sentiment scores to expressions were that some expressions 
+were usually too short to produce sentiment. I could derive the sentiment from seeing the group of words used 
+together, however if the start of the bigram is a negation word than it would alter the whole meaning of the 
+expression and score. Hence, this analysis will only provide a preliminary insight into how sentiment scores change 
+depending on the seller.</p>
+
+<p>Furthermore, as I was assigning the scores to the expression, I realized that the ungiram scores tended to be more 
+neutral compared to the bigram and trigram scores. Likewise, the trigram scores were more variable in terms of 
+positivity and negativity compared to bigram scores. So as we increase the number of words in the n-grams it yields 
+a better understanding of the sentiment of the expressions.</p>
+
+<p>As for the analysis of the sentiment scores in comments. I am now implementing an algorithm that searches for each 
+expression in the comment. If the search returns true, then the score of that expression will be added to the 
+sentiments overall score. Unfortunately, I don’t think this will be the most efficient algorithm to calculate the 
+sentence-based scores. So, I will be researching for better ways to do this.</p>
+
+<p>Here I will include a screenshot of the trigram sentiment scores in the Excel file:</p>
+
+<p><img src="http://localhost:4000/website-sg3390/assets/images/sentimentss.png" alt="Unsplash image 0" /></p>]]></content><author><name>Serra Goker</name></author><category term="Updates" /><summary type="html"><![CDATA[Update 7 This week I worked on assigning scores to the most common expressions I obtained from my unigram, bigram, and trigram models. Because I couldn’t find any pre-existing models on Turkish colloquial language, I assigned scores individually to each expression. This will definitely be a constraint when I am doing the analysis and the calculation of scores for each comment left on the products.]]></summary></entry><entry><title type="html">Update 6</title><link href="http://localhost:4000/website-sg3390/updates/update-6/" rel="alternate" type="text/html" title="Update 6" /><published>2023-04-10T00:00:00-04:00</published><updated>2023-04-10T00:00:00-04:00</updated><id>http://localhost:4000/website-sg3390/updates/update-6</id><content type="html" xml:base="http://localhost:4000/website-sg3390/updates/update-6/"><![CDATA[<p>This week I primarily worked on data analysis. To start the analysis I first concatenated all of my text data to a 
 string array. Then utilizing the nltk library- which is a library commonly used for text processing- I tokenized my 
 text. This was helpful because the data contained a lot of emojis and random characters. After that, I wanted to 
 obtain the most frequent words that appear in my text so that I can assign sentiment values.</p>
